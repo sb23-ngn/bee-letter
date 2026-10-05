@@ -1,0 +1,425 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Bee ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(135deg, #fff1f5, #ffe4ec, #fff8fa);
+      color: #4a2934;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      overflow-x: hidden;
+    }
+
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -40px;
+      font-size: 20px;
+      opacity: 0.45;
+      animation: float 8s linear infinite;
+    }
+
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 25%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 45%; animation-delay: 4s; }
+    .heart:nth-child(4) { left: 65%; animation-delay: 1s; }
+    .heart:nth-child(5) { left: 82%; animation-delay: 3s; }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.45;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.5) rotate(20deg);
+        opacity: 0;
+      }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 760px;
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 25px;
+      padding: 45px;
+      box-shadow: 0 20px 60px rgba(120, 50, 75, 0.15);
+      border: 1px solid rgba(255, 180, 200, 0.5);
+      backdrop-filter: blur(8px);
+    }
+
+    .top {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .small {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #b86b83;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 8vw, 75px);
+      color: #a94d6b;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: #87616d;
+      font-style: italic;
+    }
+
+    .line {
+      width: 70px;
+      height: 2px;
+      background: #d98da4;
+      margin: 25px auto;
+    }
+
+    .letter {
+      line-height: 1.9;
+      font-size: 17px;
+    }
+
+    .letter p {
+      margin-bottom: 22px;
+    }
+
+    .opening {
+      font-size: 24px;
+      color: #a94d6b;
+      margin-bottom: 25px !important;
+    }
+
+    .closing {
+      margin-top: 35px;
+      text-align: right;
+      font-style: italic;
+      color: #8e5265;
+    }
+
+    .signature {
+      font-size: 25px;
+      color: #a94d6b;
+      margin-top: 8px;
+    }
+
+    .button-area {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    button {
+      border: none;
+      background: #b85c78;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.25s ease;
+      box-shadow: 0 8px 20px rgba(184, 92, 120, 0.25);
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      background: #a94d6b;
+      box-shadow: 0 12px 25px rgba(184, 92, 120, 0.35);
+    }
+
+    #surprise {
+      display: none;
+      margin-top: 25px;
+      padding: 22px;
+      background: #fff1f5;
+      border-radius: 18px;
+      text-align: center;
+      color: #9c5269;
+      font-size: 18px;
+      animation: appear 0.7s ease;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 12px;
+      }
+
+      .card {
+        padding: 28px 22px;
+        border-radius: 20px;
+      }
+
+      .letter {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .opening {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hearts">
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+  </div>
+
+  <main class="card">
+
+    <div class="top">
+      <div class="small">A little something for</div>
+      <h1>Bee ❤️</h1>
+      <div class="subtitle">Because some things deserve to be said.</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="letter">
+
+      <p class="opening">My Bee,</p>
+
+      <p>
+        I don't really know if there is a perfect way to put everything I feel
+        into words, but I know that I want to try. Sometimes there are things
+        sitting in your heart that are much bigger than anything you could ever
+        say out loud, and this is me trying to give some of those feelings a
+        voice.
+      </p>
+
+      <p>
+        First, I want you to know how genuinely important you are. Not because
+        of what you do for me, not because of what you give me, and not because
+        of some list of things you have to accomplish. You matter simply because
+        you are you. There is something about your presence that makes the world
+        feel a little different. Even the smallest moments can mean more when
+        they involve you.
+      </p>
+
+      <p>
+        I appreciate the little things about you more than you probably realize.
+        The way you talk about things you care about. The random things you say.
+        The moments when you laugh without trying to. The way your personality
+        comes through even when you aren't trying to show it. All those little
+        pieces of you are what make you the person I care about so deeply.
+      </p>
+
+      <p>
+        I hope you never feel like you have to be perfect around me. You don't
+        have to have everything figured out. You don't have to always be happy.
+        You don't have to pretend that everything is okay when it isn't. You are
+        allowed to have difficult days, confusing days, quiet days, and days
+        where you simply don't know what you feel.
+      </p>
+
+      <p>
+        And on those days, I hope you remember that your worth doesn't disappear.
+        A bad day doesn't make you a bad person. A mistake doesn't erase all the
+        good inside you. One difficult moment doesn't define your entire story.
+        You are allowed to grow, change, learn, and become different versions of
+        yourself without having to apologize for it.
+      </p>
+
+      <p>
+        I also hope you are kinder to yourself. Sometimes we are much harder on
+        ourselves than we would ever be on someone else. We notice every little
+        flaw, every mistake, every awkward moment, and every thing we wish we
+        could change. But when I think about you, I don't see a checklist of
+        imperfections. I see a whole person. Someone with feelings, dreams,
+        fears, humor, kindness, strengths, weaknesses, and so many little things
+        that make you uniquely you.
+      </p>
+
+      <p>
+        There are moments when I wish you could see yourself through the eyes of
+        the people who genuinely care about you. Maybe then you'd understand
+        that you don't have to constantly question whether you're enough.
+        You already are.
+      </p>
+
+      <p>
+        I am grateful for every conversation, every laugh, every random moment,
+        every serious conversation, and every memory that has become part of our
+        story. Some memories might seem small when you look at them individually,
+        but together they become something meaningful. They become proof that
+        time spent with someone can leave a permanent mark on your heart.
+      </p>
+
+      <p>
+        If life ever gets overwhelming, I hope you remember that you don't have
+        to carry everything alone. You don't have to solve every problem in one
+        night. You don't have to know exactly where everything is going. Sometimes
+        all you need to do is take things one moment at a time.
+      </p>
+
+      <p>
+        And if you ever start doubting yourself, I hope you remember this letter.
+        Not because every word here is supposed to magically fix everything, but
+        because I want you to have something you can come back to when you need
+        a reminder.
+      </p>
+
+      <p>
+        You are appreciated.
+        You are valued.
+        You are cared about.
+        You are allowed to take up space.
+        You are allowed to have dreams.
+        You are allowed to make mistakes.
+        You are allowed to grow.
+        And most importantly, you never have to become someone else just to
+        deserve kindness.
+      </p>
+
+      <p>
+        I hope the future gives you so many reasons to smile. I hope you get to
+        experience the things you've dreamed about. I hope you meet people who
+        recognize your value and treat your heart gently. I hope you become proud
+        of the person you're becoming.
+      </p>
+
+      <p>
+        And selfishly, I hope I get to witness some of that growth. I hope I get
+        to see more of your smiles, hear more of your laughs, and be around for
+        more of the ordinary moments that somehow become special simply because
+        you're there.
+      </p>
+
+      <p>
+        I don't need some grand occasion to tell you how much you mean to me.
+        I don't need a special date or a perfect moment. Sometimes the simplest
+        truth is the most important one:
+        I'm grateful that you exist.
+      </p>
+
+      <p>
+        Thank you for being Bee. Thank you for being yourself. Thank you for all
+        the little things you probably don't even realize people notice. And
+        thank you for becoming someone whose presence can mean so much.
+      </p>
+
+      <p>
+        Whatever happens next in life, I hope you never forget that there is
+        someone out here who genuinely wants good things for you. Someone who
+        wants to see you happy, confident, peaceful, and proud of yourself.
+      </p>
+
+      <p>
+        So if you ever read this on a day when you're not feeling your best,
+        pause for a second. Take a breath. Look at these words and remember that
+        you don't have to have everything figured out today.
+      </p>
+
+      <p>
+        You just have to keep going.
+      </p>
+
+      <p>
+        And Bee, if I could leave you with one final thought, it would be this:
+        don't spend your life trying to convince yourself that you're worthy of
+        love, kindness, happiness, or good things. You deserve to experience
+        those things without constantly questioning whether you've earned them.
+      </p>
+
+      <p>
+        I hope this little website reminds you of that whenever you need it.
+        It's simple, but every word on it is meant sincerely.
+      </p>
+
+      <p class="closing">
+        With all the care in the world,
+        <br>
+        <span class="signature">Someone who cares about you ❤️</span>
+      </p>
+
+    </div>
+
+    <div class="button-area">
+      <button onclick="showSurprise()">One more thing...</button>
+
+      <div id="surprise">
+        Bee, you're genuinely special. ❤️<br><br>
+        Never forget that.
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function showSurprise() {
+      const surprise = document.getElementById("surprise");
+      surprise.style.display = "block";
+
+      for (let i = 0; i < 12; i++) {
+        const heart = document.createElement("div");
+
+        heart.innerHTML = "♥";
+        heart.style.position = "fixed";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "-20px";
+        heart.style.fontSize = (15 + Math.random() * 20) + "px";
+        heart.style.color = "#c66b86";
+        heart.style.pointerEvents = "none";
+        heart.style.zIndex = "9999";
+        heart.style.animation = "float 4s linear forwards";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 4000);
+      }
+    }
+  </script>
+
+</body>
+</html>
+```
